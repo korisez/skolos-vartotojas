@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nustatymai | Skolų valdymo portalas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="nustatymai.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Debtorium</h1>
+            </div>
+            <div class="top-bar">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="lt" selected>LT</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+                <div class="user-menu">
+                    <span id="user-name">Jonas Petraitis</span>
+                    <div class="avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+                            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Atsijungti</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="main-nav">
+                <li><a href="index.html"><i class="fas fa-home"></i> Pagrindinis</a></li>
+                <li><a href="skolos-valdymas.html"><i class="fas fa-money-bill-wave"></i> Skolos valdymas</a></li>
+                <li><a href="dokumentai.html"><i class="fas fa-file-alt"></i> Dokumentai</a></li>
+                <li><a href="pagalba.html"><i class="fas fa-question-circle"></i> Pagalba</a></li>
+                <li class="active"><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Nustatymai</h1>
+                <p>Valdykite savo paskyros nustatymus ir asmeninę informaciją</p>
+            </div>
+            
+            <!-- Settings Layout -->
+            <div class="settings-container">
+                <div class="settings-sidebar">
+                    <ul class="settings-nav">
+                        <li class="active" data-tab="personal-info"><i class="fas fa-user"></i> Asmeninė informacija</li>
+                        <li data-tab="security"><i class="fas fa-lock"></i> Saugumas</li>
+                        <li data-tab="notifications"><i class="fas fa-bell"></i> Pranešimai</li>
+                        <li data-tab="payment-methods"><i class="fas fa-credit-card"></i> Mokėjimo būdai</li>
+                        <li data-tab="language"><i class="fas fa-globe"></i> Kalba ir regionas</li>
+                        <li data-tab="privacy"><i class="fas fa-shield-alt"></i> Privatumas</li>
+                    </ul>
+                </div>
+                
+                <div class="settings-content">
+                    <!-- Personal Info Tab -->
+                    <div id="personal-info" class="settings-tab active">
+                        <div class="settings-header">
+                            <h2>Asmeninė informacija</h2>
+                            <p>Atnaujinkite savo asmeninę informaciją</p>
+                        </div>
+                        
+                        <div class="info-card user-profile">
+                            <div class="profile-avatar">
+                                <img src="https://placehold.co/150x150?text=JP" alt="Profilio nuotrauka">
+                                <button class="change-avatar-btn"><i class="fas fa-camera"></i></button>
+                            </div>
+                            <div class="profile-name">
+                                <h3>Jonas Petraitis</h3>
+                                <p>Klientas nuo 2024-05-12</p>
+                            </div>
+                        </div>
+                        
+                        <form class="settings-form">
+                            <div class="form-section">
+                                <h3>Pagrindinė informacija</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="first-name">Vardas</label>
+                                        <input type="text" id="first-name" value="Jonas" disabled>
+                                        <p class="help-text">Norėdami pakeisti vardą, kreipkitės į klientų aptarnavimą</p>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="last-name">Pavardė</label>
+                                        <input type="text" id="last-name" value="Petraitis" disabled>
+                                        <p class="help-text">Norėdami pakeisti pavardę, kreipkitės į klientų aptarnavimą</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="personal-code">Asmens kodas</label>
+                                        <input type="text" id="personal-code" value="3891012****" disabled>
+                                        <p class="help-text">Dėl saugumo rodomi ne visi skaitmenys</p>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="birth-date">Gimimo data</label>
+                                        <input type="text" id="birth-date" value="1989-10-12" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Kontaktinė informacija</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">El. paštas</label>
+                                        <input type="email" id="email" value="jonas.petraitis@example.com">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone">Telefono numeris</label>
+                                        <input type="tel" id="phone" value="+370 612 34567">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Adreso informacija</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group full-width">
+                                        <label for="street">Gatvė ir namo numeris</label>
+                                        <input type="text" id="street" value="Gedimino pr. 123-45">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">Miestas</label>
+                                        <input type="text" id="city" value="Vilnius">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="postal-code">Pašto kodas</label>
+                                        <input type="text" id="postal-code" value="01103">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group full-width">
+                                        <label for="country">Šalis</label>
+                                        <select id="country">
+                                            <option value="lt" selected>Lietuva</option>
+                                            <option value="lv">Latvija</option>
+                                            <option value="ee">Estija</option>
+                                            <option value="pl">Lenkija</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Išsaugoti pakeitimus</button>
+                                <button type="reset" class="btn btn-outline">Atstatyti</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Security Tab -->
+                    <div id="security" class="settings-tab">
+                        <div class="settings-header">
+                            <h2>Saugumas</h2>
+                            <p>Valdykite savo paskyros saugumo nustatymus</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>Paskyros saugumo būsena</h3>
+                            <div class="security-status">
+                                <div class="security-indicator">
+                                    <div class="security-level" style="width: 70%;"></div>
+                                </div>
+                                <p>Jūsų paskyros saugumas: <strong>Geras</strong></p>
+                            </div>
+                            <div class="security-suggestions">
+                                <p><i class="fas fa-check-circle text-success"></i> Stiprus slaptažodis</p>
+                                <p><i class="fas fa-check-circle text-success"></i> El. paštas patvirtintas</p>
+                                <p><i class="fas fa-times-circle text-danger"></i> Dviejų faktorių autentifikacija neįjungta</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Slaptažodžio keitimas</h3>
+                            <form class="settings-form password-form">
+                                <div class="form-group">
+                                    <label for="current-password">Dabartinis slaptažodis</label>
+                                    <div class="password-input">
+                                        <input type="password" id="current-password">
+                                        <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="new-password">Naujas slaptažodis</label>
+                                    <div class="password-input">
+                                        <input type="password" id="new-password">
+                                        <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                    <p class="help-text">Slaptažodis turi būti bent 8 simbolių ilgio, turėti didžiųjų ir mažųjų raidžių, skaitmenų ir specialių simbolių</p>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="confirm-password">Pakartokite naują slaptažodį</label>
+                                    <div class="password-input">
+                                        <input type="password" id="confirm-password">
+                                        <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                                    </div>
+                                </div>
+                                
+                                <div class="password-strength hidden">
+                                    <div class="strength-indicator">
+                                        <div class="strength-level"></div>
+                                    </div>
+                                    <p>Slaptažodžio stiprumas: <span class="strength-text">Vidutinis</span></p>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Pakeisti slaptažodį</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Dviejų faktorių autentifikacija</h3>
+                            <div class="two-factor-info">
+                                <p>Dviejų faktorių autentifikacija suteikia papildomą saugumo lygį jūsų paskyrai. Be slaptažodžio, prisijungimui taip pat reikės patvirtinimo kodo, kurį gausite SMS žinute arba autentifikavimo programėlėje.</p>
+                                
+                                <div class="two-factor-status">
+                                    <div class="status-indicator disabled">
+                                        <i class="fas fa-toggle-off"></i>
+                                        <span>Išjungta</span>
+                                    </div>
+                                    <button class="btn btn-primary enable-2fa-btn">Įjungti dviejų faktorių autentifikaciją</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Aktyvios sesijos</h3>
+                            <div class="sessions-list">
+                                <div class="session-item current">
+                                    <div class="session-info">
+                                        <i class="fas fa-desktop"></i>
+                                        <div class="session-details">
+                                            <h4>Windows - Chrome</h4>
+                                            <p>Vilnius, Lietuva • Dabar</p>
+                                        </div>
+                                    </div>
+                                    <span class="session-status">Dabartinė sesija</span>
+                                </div>
+                                
+                                <div class="session-item">
+                                    <div class="session-info">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <div class="session-details">
+                                            <h4>iPhone - Safari</h4>
+                                            <p>Vilnius, Lietuva • Prieš 2 dienas</p>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-sm btn-danger">Atsijungti</button>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-outline logout-all-btn">Atsijungti iš visų įrenginių</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Notifications Tab -->
+                    <div id="notifications" class="settings-tab">
+                        <div class="settings-header">
+                            <h2>Pranešimai</h2>
+                            <p>Valdykite, kokius pranešimus norite gauti ir kaip</p>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Pranešimų nustatymai</h3>
+                            <p>Pasirinkite, kokius pranešimus norite gauti ir kokiu būdu</p>
+                            
+                            <div class="notification-settings">
+                                <div class="notification-setting">
+                                    <div class="notification-info">
+                                        <h4>Mokėjimų priminimai</h4>
+                                        <p>Gauti priminimus apie artėjančius mokėjimus</p>
+                                    </div>
+                                    <div class="notification-channels">
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="payment-reminder-email" checked>
+                                            <span class="icon"><i class="fas fa-envelope"></i> El. paštas</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="payment-reminder-sms" checked>
+                                            <span class="icon"><i class="fas fa-sms"></i> SMS</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="payment-reminder-push">
+                                            <span class="icon"><i class="fas fa-bell"></i> Naršyklė</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-setting">
+                                    <div class="notification-info">
+                                        <h4>Mokėjimų patvirtinimai</h4>
+                                        <p>Gauti patvirtinimus, kai mokėjimai apdorojami</p>
+                                    </div>
+                                    <div class="notification-channels">
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="payment-confirm-email" checked>
+                                            <span class="icon"><i class="fas fa-envelope"></i> El. paštas</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="payment-confirm-sms">
+                                            <span class="icon"><i class="fas fa-sms"></i> SMS</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="payment-confirm-push" checked>
+                                            <span class="icon"><i class="fas fa-bell"></i> Naršyklė</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-setting">
+                                    <div class="notification-info">
+                                        <h4>Būsenos atnaujinimai</h4>
+                                        <p>Gauti pranešimus apie skolos būsenos pokyčius</p>
+                                    </div>
+                                    <div class="notification-channels">
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="status-update-email" checked>
+                                            <span class="icon"><i class="fas fa-envelope"></i> El. paštas</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="status-update-sms">
+                                            <span class="icon"><i class="fas fa-sms"></i> SMS</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="status-update-push">
+                                            <span class="icon"><i class="fas fa-bell"></i> Naršyklė</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-setting">
+                                    <div class="notification-info">
+                                        <h4>Dokumentų pridėjimas</h4>
+                                        <p>Gauti pranešimus, kai pridedami nauji dokumentai</p>
+                                    </div>
+                                    <div class="notification-channels">
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="document-email" checked>
+                                            <span class="icon"><i class="fas fa-envelope"></i> El. paštas</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="document-sms">
+                                            <span class="icon"><i class="fas fa-sms"></i> SMS</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="document-push" checked>
+                                            <span class="icon"><i class="fas fa-bell"></i> Naršyklė</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-setting">
+                                    <div class="notification-info">
+                                        <h4>Specialūs pasiūlymai</h4>
+                                        <p>Gauti informaciją apie specialius pasiūlymus</p>
+                                    </div>
+                                    <div class="notification-channels">
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="offers-email">
+                                            <span class="icon"><i class="fas fa-envelope"></i> El. paštas</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="offers-sms">
+                                            <span class="icon"><i class="fas fa-sms"></i> SMS</span>
+                                        </label>
+                                        <label class="channel-toggle">
+                                            <input type="checkbox" name="offers-push">
+                                            <span class="icon"><i class="fas fa-bell"></i> Naršyklė</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary save-notifications-btn">Išsaugoti nustatymus</button>
+                            <button type="button" class="btn btn-outline select-all-btn">Pasirinkti visus</button>
+                            <button type="button" class="btn btn-outline clear-all-btn">Išvalyti visus</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Methods Tab -->
+                    <div id="payment-methods" class="settings-tab">
+                        <div class="settings-header">
+                            <h2>Mokėjimo būdai</h2>
+                            <p>Valdykite savo mokėjimo būdus</p>
+                        </div>
+                        
+                        <div class="payment-methods-list">
+                            <div class="payment-method-card">
+                                <div class="card-icon">
+                                    <i class="fab fa-cc-visa"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h3>Visa ****1234</h3>
+                                    <p>Galioja iki: 12/25</p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-outline edit-card-btn">Redaguoti</button>
+                                    <button class="btn btn-sm btn-danger remove-card-btn">Pašalinti</button>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-method-card">
+                                <div class="card-icon">
+                                    <i class="fab fa-cc-mastercard"></i>
+                                </div>
+                                <div class="card-info">
+                                    <h3>Mastercard ****5678</h3>
+                                    <p>Galioja iki: 09/24</p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-outline edit-card-btn">Redaguoti</button>
+                                    <button class="btn btn-sm btn-danger remove-card-btn">Pašalinti</button>
+                                </div>
+                            </div>
+                            
+                            <div class="add-payment-btn">
+                                <button class="btn btn-primary add-card-btn">
+                                    <i class="fas fa-plus"></i>
+                                    Pridėti naują mokėjimo būdą
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Automatiniai mokėjimai</h3>
+                            <div class="auto-payment-settings">
+                                <div class="toggle-switch">
+                                    <label class="switch">
+                                        <input type="checkbox" id="auto-payments-toggle">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <div class="toggle-label">
+                                        <h4>Automatiniai mokėjimai</h4>
+                                        <p>Leisti automatiškai nurašyti mokėjimus pagal grafiką</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="auto-payment-details">
+                                    <div class="form-group">
+                                        <label for="auto-payment-card">Mokėjimo būdas</label>
+                                        <select id="auto-payment-card">
+                                            <option value="visa-1234">Visa ****1234</option>
+                                            <option value="mc-5678">Mastercard ****5678</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="auto-payment-date">Nurašymo data</label>
+                                        <select id="auto-payment-date">
+                                            <option value="due">Mokėjimo termino dieną</option>
+                                            <option value="before-3">3 dienos prieš terminą</option>
+                                            <option value="before-7">7 dienos prieš terminą</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary save-payment-settings-btn">Išsaugoti nustatymus</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Language Tab -->
+                    <div id="language" class="settings-tab">
+                        <div class="settings-header">
+                            <h2>Kalba ir regionas</h2>
+                            <p>Valdykite kalbos ir regiono nustatymus</p>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Kalbos nustatymai</h3>
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label for="language-select">Pasirinkite kalbą</label>
+                                    <select id="language-select">
+                                        <option value="lt" selected>Lietuvių</option>
+                                        <option value="en">English</option>
+                                        <option value="ru">Русский</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="date-format">Datos formatas</label>
+                                    <select id="date-format">
+                                        <option value="ymd" selected>MMMM-MM-DD (2024-06-15)</option>
+                                        <option value="dmy">DD.MM.YYYY (15.06.2024)</option>
+                                        <option value="mdy">MM/DD/YYYY (06/15/2024)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="time-format">Laiko formatas</label>
+                                    <select id="time-format">
+                                        <option value="24h" selected>24 valandų (14:30)</option>
+                                        <option value="12h">12 valandų (2:30 PM)</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Regiono nustatymai</h3>
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label for="currency">Valiuta</label>
+                                    <select id="currency">
+                                        <option value="eur" selected>Euro (€)</option>
+                                        <option value="usd">JAV doleris ($)</option>
+                                        <option value="gbp">Svaras sterlingų (£)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="timezone">Laiko juosta</label>
+                                    <select id="timezone">
+                                        <option value="europe-vilnius" selected>(GMT+02:00) Vilnius, Ryga, Talinas</option>
+                                        <option value="europe-london">(GMT+01:00) Londonas</option>
+                                        <option value="us-eastern">(GMT-05:00) JAV rytų pakrantė</option>
+                                        <option value="us-pacific">(GMT-08:00) JAV vakarų pakrantė</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary save-language-settings-btn">Išsaugoti nustatymus</button>
+                            <button type="button" class="btn btn-outline restore-language-btn">Atstatyti numatytuosius</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Privacy Tab -->
+                    <div id="privacy" class="settings-tab">
+                        <div class="settings-header">
+                            <h2>Privatumas</h2>
+                            <p>Valdykite savo privatumo nustatymus</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>Jūsų duomenų privatumas</h3>
+                            <p>Mes saugome jūsų duomenis pagal Bendrąjį duomenų apsaugos reglamentą (BDAR) ir Lietuvos Respublikos asmens duomenų teisinės apsaugos įstatymą. Jūs turite teisę:</p>
+                            <ul class="privacy-rights">
+                                <li><i class="fas fa-check"></i> Prieiti prie savo asmens duomenų</li>
+                                <li><i class="fas fa-check"></i> Ištaisyti savo asmens duomenis</li>
+                                <li><i class="fas fa-check"></i> Ištrinti savo asmens duomenis (teisė būti pamirštam)</li>
+                                <li><i class="fas fa-check"></i> Apriboti savo asmens duomenų tvarkymą</li>
+                                <li><i class="fas fa-check"></i> Perkelti savo asmens duomenis</li>
+                                <li><i class="fas fa-check"></i> Nesutikti su savo asmens duomenų tvarkymu</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Sutikimai dėl duomenų naudojimo</h3>
+                            <div class="consent-settings">
+                                <div class="consent-setting">
+                                    <div class="toggle-switch">
+                                        <label class="switch">
+                                            <input type="checkbox" id="marketing-consent" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <h4>Rinkodaros tikslai</h4>
+                                            <p>Leisti naudoti mano duomenis rinkodaros tikslais, siekiant pasiūlyti man aktualius produktus ir paslaugas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="consent-setting">
+                                    <div class="toggle-switch">
+                                        <label class="switch">
+                                            <input type="checkbox" id="third-party-consent">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <h4>Dalijimasis su trečiosiomis šalimis</h4>
+                                            <p>Leisti dalintis mano duomenimis su patikimais partneriais, kad jie galėtų pasiūlyti man aktualius produktus ir paslaugas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="consent-setting">
+                                    <div class="toggle-switch">
+                                        <label class="switch">
+                                            <input type="checkbox" id="analytics-consent" checked>
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <h4>Analitiniai slapukai</h4>
+                                            <p>Leisti naudoti analitines priemones, kad galėtume tobulinti platformą ir paslaugas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Duomenų valdymas</h3>
+                            <div class="data-management-options">
+                                <button class="btn btn-outline export-data-btn">
+                                    <i class="fas fa-download"></i>
+                                    Atsisiųsti savo duomenis
+                                </button>
+                                
+                                <button class="btn btn-danger delete-account-btn">
+                                    <i class="fas fa-trash-alt"></i>
+                                    Ištrinti mano paskyrą
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-primary save-privacy-settings-btn">Išsaugoti nustatymus</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    &copy; 2024 Debtorium. Visos teisės saugomos.
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privatumo politika</a>
+                    <a href="#">Teisinė informacija</a>
+                    <a href="#">Slapukų politika</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="shared.js"></script>
+    <script src="nustatymai.js"></script>
+</body>
+</html> 

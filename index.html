@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skolininko Portalas - Pagrindinis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Debtorium</h1>
+            </div>
+            <div class="top-bar">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="lt" selected>LT</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+                <div class="user-menu">
+                    <span id="user-name">Vardas Pavardė</span>
+                    <div class="avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+                            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Atsijungti</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="main-nav">
+                <li class="active"><a href="index.html"><i class="fas fa-home"></i> Pagrindinis</a></li>
+                <li><a href="skolos-valdymas.html"><i class="fas fa-money-bill-wave"></i> Skolos valdymas</a></li>
+                <li><a href="dokumentai.html"><i class="fas fa-file-alt"></i> Dokumentai</a></li>
+                <li><a href="pagalba.html"><i class="fas fa-question-circle"></i> Pagalba</a></li>
+                <li><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="dashboard">
+                <div class="row">
+                    <!-- Asmeninė informacija -->
+                    <div class="col dashboard-card personal-info">
+                        <div class="card-header">
+                            <h2>Asmeninė informacija</h2>
+                            <button class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="info-row">
+                                <span class="label">Vardas, Pavardė:</span>
+                                <span class="value">Jonas Jonaitis</span>
+                            </div>
+                            <div class="info-row address-field">
+                                <span class="label">Adresas:</span>
+                                <span class="value">Vilniaus g. 123, Vilnius</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">El. paštas:</span>
+                                <span class="value">jonas.jonaitis@example.com</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">Telefonas:</span>
+                                <span class="value">+370 600 00000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skolos statusas -->
+                    <div class="col dashboard-card debt-status">
+                        <div class="card-header">
+                            <h2>Skolos statusas</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="debt-status-info">
+                                <div class="debt-amount">
+                                    <span class="label">Bendra skola:</span>
+                                    <span class="value amount">2.450,00 €</span>
+                                </div>
+                                <div class="debt-status-indicator">
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 35%;"></div>
+                                    </div>
+                                    <div class="status-labels">
+                                        <span>0</span>
+                                        <span>2.450,00 €</span>
+                                        <span>7.000,00 €</span>
+                                    </div>
+                                </div>
+                                <div class="payment-status">
+                                    <span class="label">Mokėjimo būklė:</span>
+                                    <span class="value status warning">Vėluojantis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Mokėjimo grafikai -->
+                    <div class="col dashboard-card payment-schedules">
+                        <div class="card-header">
+                            <h2>Mokėjimo grafikai</h2>
+                            <a href="skolos-valdymas.html" class="btn-link">Daugiau <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <table class="payment-table">
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Suma</th>
+                                        <th>Statusas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="past-due">
+                                        <td>2024-05-15</td>
+                                        <td>250,00 €</td>
+                                        <td><span class="status danger">Vėluoja</span></td>
+                                    </tr>
+                                    <tr class="upcoming">
+                                        <td>2024-06-15</td>
+                                        <td>250,00 €</td>
+                                        <td><span class="status info">Laukiama</span></td>
+                                    </tr>
+                                    <tr class="upcoming">
+                                        <td>2024-07-15</td>
+                                        <td>250,00 €</td>
+                                        <td><span class="status info">Laukiama</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Pranešimai ir įspėjimai -->
+                    <div class="col dashboard-card notifications">
+                        <div class="card-header">
+                            <h2>Pranešimai ir įspėjimai</h2>
+                            <div class="filter-search">
+                                <input type="text" placeholder="Ieškoti...">
+                                <select>
+                                    <option value="all">Visi</option>
+                                    <option value="unread">Neskaityti</option>
+                                    <option value="important">Svarbūs</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="notification-list">
+                                <li class="notification unread important">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <div class="notification-title">Priminimas dėl vėluojančio mokėjimo</div>
+                                        <div class="notification-time">Prieš 2 dienas</div>
+                                        <div class="notification-text">Jūsų mokėjimas (250,00 €) vėluoja 15 dienų. Prašome kuo skubiau atlikti mokėjimą.</div>
+                                    </div>
+                                </li>
+                                <li class="notification">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <div class="notification-title">Naujas dokumentas</div>
+                                        <div class="notification-time">Prieš 1 savaitę</div>
+                                        <div class="notification-text">Jūsų paskyroje patalpintas naujas mokėjimo grafikas.</div>
+                                    </div>
+                                </li>
+                                <li class="notification">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <div class="notification-title">Sistemos atnaujinimas</div>
+                                        <div class="notification-time">Prieš 2 savaites</div>
+                                        <div class="notification-text">Sistema buvo atnaujinta. Susipažinkite su naujomis funkcijomis.</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    © 2024 Debtorium. Visos teisės saugomos.
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privatumo politika</a>
+                    <a href="#">Teisinė informacija</a>
+                    <a href="#">Slapukų politika</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="index.js"></script>
+</body>
+</html> 

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentai | Skolų valdymo portalas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="dokumentai.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Debtorium</h1>
+            </div>
+            <div class="top-bar">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="lt" selected>LT</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+                <div class="user-menu">
+                    <span id="user-name">Jonas Petraitis</span>
+                    <div class="avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+                            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Atsijungti</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="main-nav">
+                <li><a href="index.html"><i class="fas fa-home"></i> Pagrindinis</a></li>
+                <li><a href="skolos-valdymas.html"><i class="fas fa-money-bill-wave"></i> Skolos valdymas</a></li>
+                <li class="active"><a href="dokumentai.html"><i class="fas fa-file-alt"></i> Dokumentai</a></li>
+                <li><a href="pagalba.html"><i class="fas fa-question-circle"></i> Pagalba</a></li>
+                <li><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Dokumentai</h1>
+                <p>Peržiūrėkite, atsisiųskite ir įkelkite su jūsų skola susijusius dokumentus</p>
+            </div>
+            
+            <!-- Documents Tab Navigation -->
+            <ul class="tab-nav">
+                <li class="active" data-tab="all-documents"><i class="fas fa-file-alt"></i> Visi dokumentai</li>
+                <li data-tab="contracts"><i class="fas fa-file-contract"></i> Sutartys</li>
+                <li data-tab="invoices"><i class="fas fa-file-invoice"></i> Sąskaitos</li>
+                <li data-tab="payment-receipts"><i class="fas fa-file-invoice-dollar"></i> Mokėjimo kvitai</li>
+                <li data-tab="communication"><i class="fas fa-envelope"></i> Pranešimai</li>
+                <li data-tab="upload-document"><i class="fas fa-upload"></i> Įkelti dokumentą</li>
+            </ul>
+            
+            <!-- Documents Tab Content -->
+            <div class="tab-content">
+                <!-- All Documents Tab -->
+                <div id="all-documents" class="tab-pane active">
+                    <!-- Filter Bar -->
+                    <div class="filter-bar">
+                        <div class="search-box">
+                            <input type="text" placeholder="Ieškoti dokumentų...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        
+                        <div class="filters">
+                            <select class="date-filter">
+                                <option value="all">Visos datos</option>
+                                <option value="this-month">Šis mėnuo</option>
+                                <option value="last-month">Praėjęs mėnuo</option>
+                                <option value="last-3-months">Paskutiniai 3 mėn.</option>
+                                <option value="last-6-months">Paskutiniai 6 mėn.</option>
+                                <option value="this-year">Šie metai</option>
+                            </select>
+                            
+                            <select class="doc-type-filter">
+                                <option value="all">Visi tipai</option>
+                                <option value="contract">Sutartys</option>
+                                <option value="invoice">Sąskaitos</option>
+                                <option value="receipt">Mokėjimo kvitai</option>
+                                <option value="notice">Pranešimai</option>
+                                <option value="other">Kiti</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Documents Grid -->
+                    <div class="documents-grid">
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Skolos grąžinimo sutartis</h4>
+                                <p class="doc-number">SUT-2024-05-12-001</p>
+                                <p class="doc-date">2024-05-12</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Mokėjimo sąskaita</h4>
+                                <p class="doc-number">INV-2024-06-01-042</p>
+                                <p class="doc-date">2024-06-01</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Mokėjimo kvitas</h4>
+                                <p class="doc-number">REC-2024-06-05-087</p>
+                                <p class="doc-date">2024-06-05</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Pranešimas apie mokėjimą</h4>
+                                <p class="doc-number">NOT-2024-07-01-023</p>
+                                <p class="doc-date">2024-07-01</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Priminimas apie mokėjimą</h4>
+                                <p class="doc-number">REM-2024-07-15-011</p>
+                                <p class="doc-date">2024-07-15</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Mokėjimo grafiko sutartis</h4>
+                                <p class="doc-number">SCH-2024-05-15-002</p>
+                                <p class="doc-date">2024-05-15</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="page-link disabled"><i class="fas fa-chevron-left"></i></button>
+                        <button class="page-link active">1</button>
+                        <button class="page-link">2</button>
+                        <button class="page-link">3</button>
+                        <button class="page-link"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Contracts Tab -->
+                <div id="contracts" class="tab-pane">
+                    <div class="documents-grid">
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Skolos grąžinimo sutartis</h4>
+                                <p class="doc-number">SUT-2024-05-12-001</p>
+                                <p class="doc-date">2024-05-12</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Mokėjimo grafiko sutartis</h4>
+                                <p class="doc-number">SCH-2024-05-15-002</p>
+                                <p class="doc-date">2024-05-15</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Invoices Tab -->
+                <div id="invoices" class="tab-pane">
+                    <div class="documents-grid">
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Mokėjimo sąskaita</h4>
+                                <p class="doc-number">INV-2024-06-01-042</p>
+                                <p class="doc-date">2024-06-01</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payment Receipts Tab -->
+                <div id="payment-receipts" class="tab-pane">
+                    <div class="documents-grid">
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Mokėjimo kvitas</h4>
+                                <p class="doc-number">REC-2024-06-05-087</p>
+                                <p class="doc-date">2024-06-05</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Communication Tab -->
+                <div id="communication" class="tab-pane">
+                    <div class="documents-grid">
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Pranešimas apie mokėjimą</h4>
+                                <p class="doc-number">NOT-2024-07-01-023</p>
+                                <p class="doc-date">2024-07-01</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Card -->
+                        <div class="document-card">
+                            <div class="document-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Priminimas apie mokėjimą</h4>
+                                <p class="doc-number">REM-2024-07-15-011</p>
+                                <p class="doc-date">2024-07-15</p>
+                                <div class="document-actions">
+                                    <button class="btn-sm btn-view"><i class="fas fa-eye"></i> Peržiūrėti</button>
+                                    <button class="btn-sm btn-download"><i class="fas fa-download"></i> Atsisiųsti</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upload Document Tab -->
+                <div id="upload-document" class="tab-pane">
+                    <div class="upload-container">
+                        <h3>Įkelti naują dokumentą</h3>
+                        <p>Įkelkite dokumentus, susijusius su jūsų skola. Palaikomi formatai: PDF, JPG, PNG, DOC, DOCX.</p>
+                        
+                        <form class="upload-form">
+                            <div class="form-group">
+                                <label for="doc-title">Dokumento pavadinimas</label>
+                                <input type="text" id="doc-title" placeholder="Įveskite dokumento pavadinimą" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="doc-type">Dokumento tipas</label>
+                                <select id="doc-type" required>
+                                    <option value="">Pasirinkite dokumento tipą</option>
+                                    <option value="contract">Sutartis</option>
+                                    <option value="invoice">Sąskaita</option>
+                                    <option value="receipt">Mokėjimo kvitas</option>
+                                    <option value="notice">Pranešimas</option>
+                                    <option value="other">Kitas</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="doc-date">Dokumento data</label>
+                                <input type="date" id="doc-date" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="doc-note">Pastabos (neprivaloma)</label>
+                                <textarea id="doc-note" rows="3" placeholder="Įveskite bet kokias pastabas apie dokumentą"></textarea>
+                            </div>
+                            
+                            <div class="form-group upload-area">
+                                <label class="file-upload-label">
+                                    <input type="file" id="file-upload" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" required>
+                                    <div class="upload-zone">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <p>Tempkite failus čia arba spauskite pasirinkti</p>
+                                        <span class="btn btn-outline">Pasirinkti failą</span>
+                                    </div>
+                                </label>
+                                
+                                <div class="selected-file" style="display: none;">
+                                    <div class="file-info">
+                                        <i class="fas fa-file"></i>
+                                        <span class="file-name">Dokumentas.pdf</span>
+                                        <span class="file-size">(1.2 MB)</span>
+                                    </div>
+                                    <button type="button" class="btn-sm btn-remove"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Įkelti dokumentą</button>
+                                <button type="button" class="btn btn-outline">Atšaukti</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Document Preview Modal -->
+            <div class="modal" id="document-preview-modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Dokumento peržiūra</h3>
+                        <button class="modal-close"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="document-viewer">
+                            <img src="https://placehold.co/600x800?text=Document+Preview" alt="Dokumento peržiūra">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary"><i class="fas fa-download"></i> Atsisiųsti</button>
+                        <button class="btn btn-outline modal-close">Uždaryti</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    &copy; 2024 Debtorium. Visos teisės saugomos.
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privatumo politika</a>
+                    <a href="#">Teisinė informacija</a>
+                    <a href="#">Slapukų politika</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="shared.js"></script>
+    <script src="dokumentai.js"></script>
+</body>
+</html> 

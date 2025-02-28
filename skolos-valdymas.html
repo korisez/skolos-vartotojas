@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skolininko Portalas - Skolos valdymas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="skolos-valdymas.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Debtorium</h1>
+            </div>
+            <div class="top-bar">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="lt" selected>LT</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+                <div class="user-menu">
+                    <span id="user-name">Vardas Pavardė</span>
+                    <div class="avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+                            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Atsijungti</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="main-nav">
+                <li><a href="index.html"><i class="fas fa-home"></i> Pagrindinis</a></li>
+                <li class="active"><a href="skolos-valdymas.html"><i class="fas fa-money-bill-wave"></i> Skolos valdymas</a></li>
+                <li><a href="dokumentai.html"><i class="fas fa-file-alt"></i> Dokumentai</a></li>
+                <li><a href="pagalba.html"><i class="fas fa-question-circle"></i> Pagalba</a></li>
+                <li><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1>Skolos valdymas</h1>
+                <div class="summary-box">
+                    <div class="summary-item">
+                        <span class="label">Bendra skola:</span>
+                        <span class="value amount">2.450,00 €</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Paskutinis mokėjimas:</span>
+                        <span class="value">2024-04-15</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">Mokėjimo būklė:</span>
+                        <span class="value status warning">Vėluojantis</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <ul class="tab-nav">
+                    <li class="active" data-tab="debt-history"><i class="fas fa-history"></i> Skolos istorija</li>
+                    <li data-tab="payment-schedules"><i class="fas fa-calendar-alt"></i> Mokėjimo grafikai</li>
+                    <li data-tab="payment-options"><i class="fas fa-credit-card"></i> Mokėjimo galimybės</li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- Skolos istorija -->
+                    <div class="tab-pane active" id="debt-history">
+                        <div class="filter-bar">
+                            <div class="search-box">
+                                <input type="text" placeholder="Ieškoti...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                            <div class="filter-options">
+                                <select class="date-filter">
+                                    <option value="all">Visi laikotarpiai</option>
+                                    <option value="this-month">Šis mėnuo</option>
+                                    <option value="last-month">Praėjęs mėnuo</option>
+                                    <option value="last-3-months">Paskutiniai 3 mėnesiai</option>
+                                    <option value="last-6-months">Paskutiniai 6 mėnesiai</option>
+                                    <option value="this-year">Šie metai</option>
+                                </select>
+                                <select class="status-filter">
+                                    <option value="all">Visi statusai</option>
+                                    <option value="paid">Apmokėta</option>
+                                    <option value="pending">Laukiama</option>
+                                    <option value="late">Vėluoja</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Operacija</th>
+                                        <th>Suma</th>
+                                        <th>Statusas</th>
+                                        <th>Likutis</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2024-05-15</td>
+                                        <td>Vėluojantis mokėjimas</td>
+                                        <td class="amount">250,00 €</td>
+                                        <td><span class="status danger">Vėluoja</span></td>
+                                        <td class="amount">2.450,00 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-04-15</td>
+                                        <td>Mokėjimas</td>
+                                        <td class="amount">250,00 €</td>
+                                        <td><span class="status success">Apmokėta</span></td>
+                                        <td class="amount">2.450,00 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-03-15</td>
+                                        <td>Mokėjimas</td>
+                                        <td class="amount">250,00 €</td>
+                                        <td><span class="status success">Apmokėta</span></td>
+                                        <td class="amount">2.700,00 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-02-15</td>
+                                        <td>Mokėjimas</td>
+                                        <td class="amount">250,00 €</td>
+                                        <td><span class="status success">Apmokėta</span></td>
+                                        <td class="amount">2.950,00 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2024-01-15</td>
+                                        <td>Mokėjimas</td>
+                                        <td class="amount">250,00 €</td>
+                                        <td><span class="status success">Apmokėta</span></td>
+                                        <td class="amount">3.200,00 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-12-01</td>
+                                        <td>Skola sukurta</td>
+                                        <td class="amount">3.450,00 €</td>
+                                        <td><span class="status info">Sukurta</span></td>
+                                        <td class="amount">3.450,00 €</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination">
+                            <button class="btn-page" disabled><i class="fas fa-chevron-left"></i></button>
+                            <button class="btn-page active">1</button>
+                            <button class="btn-page">2</button>
+                            <button class="btn-page">3</button>
+                            <button class="btn-page"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Mokėjimo grafikai -->
+                    <div class="tab-pane" id="payment-schedules">
+                        <div class="payment-schedule-list">
+                            <div class="payment-schedule-card">
+                                <div class="card-header">
+                                    <h3>Dabartinis mokėjimo grafikas</h3>
+                                    <div class="card-actions">
+                                        <button class="btn-action"><i class="fas fa-download"></i></button>
+                                        <button class="btn-action"><i class="fas fa-print"></i></button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="schedule-info">
+                                        <div class="info-row">
+                                            <span class="label">Sukurta:</span>
+                                            <span class="value">2023-12-01</span>
+                                        </div>
+                                        <div class="info-row">
+                                            <span class="label">Pradinė suma:</span>
+                                            <span class="value amount">3.450,00 €</span>
+                                        </div>
+                                        <div class="info-row">
+                                            <span class="label">Mėnesinis mokėjimas:</span>
+                                            <span class="value amount">250,00 €</span>
+                                        </div>
+                                        <div class="info-row">
+                                            <span class="label">Liko mokėjimų:</span>
+                                            <span class="value">10</span>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="schedule-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Data</th>
+                                                    <th>Suma</th>
+                                                    <th>Statusas</th>
+                                                    <th>Veiksmai</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="past-due">
+                                                    <td>2024-05-15</td>
+                                                    <td class="amount">250,00 €</td>
+                                                    <td><span class="status danger">Vėluoja</span></td>
+                                                    <td><button class="btn btn-primary btn-sm pay-now">Mokėti dabar</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2024-06-15</td>
+                                                    <td class="amount">250,00 €</td>
+                                                    <td><span class="status info">Laukiama</span></td>
+                                                    <td><button class="btn btn-outline btn-sm">Mokėti iš anksto</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2024-07-15</td>
+                                                    <td class="amount">250,00 €</td>
+                                                    <td><span class="status info">Laukiama</span></td>
+                                                    <td><button class="btn btn-outline btn-sm">Mokėti iš anksto</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2024-08-15</td>
+                                                    <td class="amount">250,00 €</td>
+                                                    <td><span class="status info">Laukiama</span></td>
+                                                    <td><button class="btn btn-outline btn-sm">Mokėti iš anksto</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <button class="btn-link view-all">Rodyti visus mokėjimus <i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mokėjimo galimybės -->
+                    <div class="tab-pane" id="payment-options">
+                        <div class="payment-options-container">
+                            <div class="payment-options-header">
+                                <h3>Pasirinkite mokėjimo būdą</h3>
+                                <p>Norėdami atlikti mokėjimą, pasirinkite vieną iš žemiau nurodytų mokėjimo būdų.</p>
+                            </div>
+                            
+                            <div class="payment-amount">
+                                <h4>Mokėjimo suma</h4>
+                                <div class="amount-options">
+                                    <button class="amount-option" data-amount="250">250,00 €</button>
+                                    <button class="amount-option" data-amount="500">500,00 €</button>
+                                    <button class="amount-option" data-amount="1000">1.000,00 €</button>
+                                    <button class="amount-option custom" data-amount="custom">Kita suma</button>
+                                </div>
+                                <div class="custom-amount">
+                                    <label for="custom-amount-input">Įveskite sumą (€)</label>
+                                    <input type="number" id="custom-amount-input" placeholder="0.00" min="1" step="0.01">
+                                </div>
+                            </div>
+                            
+                            <div class="payment-methods">
+                                <h4>Mokėjimo būdai</h4>
+                                <div class="methods-grid">
+                                    <div class="payment-method-card">
+                                        <div class="method-icon"><i class="fas fa-university"></i></div>
+                                        <h5>Banko pavedimu</h5>
+                                        <p>Atlikite mokėjimą per savo banką</p>
+                                        <button class="btn btn-primary">Pasirinkti</button>
+                                    </div>
+                                    <div class="payment-method-card">
+                                        <div class="method-icon"><i class="fas fa-credit-card"></i></div>
+                                        <h5>Kredito kortele</h5>
+                                        <p>Mokėkite saugiai su Visa arba Mastercard</p>
+                                        <button class="btn btn-primary">Pasirinkti</button>
+                                    </div>
+                                    <div class="payment-method-card">
+                                        <div class="method-icon"><i class="fab fa-paypal"></i></div>
+                                        <h5>PayPal</h5>
+                                        <p>Mokėkite saugiai su PayPal</p>
+                                        <button class="btn btn-primary">Pasirinkti</button>
+                                    </div>
+                                    <div class="payment-method-card">
+                                        <div class="method-icon"><i class="fas fa-mobile-alt"></i></div>
+                                        <h5>Mobilus mokėjimas</h5>
+                                        <p>Mokėkite per mobilųjį banką</p>
+                                        <button class="btn btn-primary">Pasirinkti</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-history">
+                                <h4>Mokėjimų istorija</h4>
+                                <p>Peržiūrėkite savo ankstesnius mokėjimus ir jų statusą.</p>
+                                <button class="btn btn-secondary">Peržiūrėti mokėjimų istoriją</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    © 2024 Debtorium. Visos teisės saugomos.
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privatumo politika</a>
+                    <a href="#">Teisinė informacija</a>
+                    <a href="#">Slapukų politika</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="skolos-valdymas.js"></script>
+</body>
+</html> 

@@ -1,0 +1,261 @@
+/* Specific styles for the index/dashboard page */
+
+/* Personal Info Card */
+.personal-info .info-row {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.personal-info .info-row:last-child {
+    margin-bottom: 0;
+}
+
+.personal-info .label {
+    font-weight: 500;
+    flex: 0 0 35%;
+    color: var(--text-light);
+}
+
+.personal-info .value {
+    flex: 0 0 65%;
+}
+
+/* Debt Status Card */
+.debt-status-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.debt-amount {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.debt-amount .label {
+    font-weight: 500;
+    margin-right: var(--spacing-md);
+    color: var(--text-light);
+}
+
+.debt-amount .amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--danger);
+}
+
+.debt-status-indicator {
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 4px;
+}
+
+.status-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+.payment-status {
+    display: flex;
+    align-items: center;
+}
+
+.payment-status .label {
+    font-weight: 500;
+    margin-right: var(--spacing-md);
+    color: var(--text-light);
+}
+
+/* Payment Schedules Card */
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.payment-table th,
+.payment-table td {
+    padding: var(--spacing-sm);
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.payment-table th {
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.payment-table tr:last-child td {
+    border-bottom: none;
+}
+
+.payment-table .past-due td {
+    color: var(--danger);
+}
+
+/* Notifications Card */
+.filter-search {
+    display: flex;
+    align-items: center;
+}
+
+.filter-search input[type="text"] {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    margin-right: var(--spacing-sm);
+}
+
+.filter-search select {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-white);
+}
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification {
+    display: flex;
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.notification:last-child {
+    border-bottom: none;
+}
+
+.notification.unread {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.notification.important .notification-icon {
+    color: var(--warning);
+}
+
+.notification-icon {
+    flex: 0 0 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--text-light);
+    padding-top: var(--spacing-xs);
+}
+
+.notification-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.notification-title {
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.notification-time {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-xs);
+}
+
+.notification-text {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+/* Utility Classes */
+.mobile-hide {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    /* Slėpti adreso lauką mobiliame vaizde, kad būtų daugiau vietos */
+    .personal-info .address-field {
+        display: none;
+    }
+    
+    /* Mobilūs kompaktiški elementai */
+    .card-header h2 {
+        font-size: 1rem;
+    }
+    
+    .card-body {
+        padding: 0.6rem;
+    }
+    
+    .dashboard .col {
+        padding: 0 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Labai kompaktiška asmeninė info */
+    .personal-info .info-row {
+        margin-bottom: 0.35rem;
+        display: grid;
+        grid-template-columns: 35% 65%;
+    }
+    
+    .personal-info .label {
+        font-size: 0.8rem;
+        color: var(--text-light);
+    }
+    
+    .personal-info .value {
+        font-size: 0.8rem;
+    }
+    
+    /* Kompaktiškas skolos statusas */
+    .debt-status-info {
+        gap: 0.35rem;
+    }
+    
+    .debt-amount {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.35rem;
+    }
+    
+    .debt-amount .label,
+    .payment-status .label {
+        font-size: 0.8rem;
+    }
+    
+    .debt-amount .amount {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .payment-status {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    /* Kompaktiška mokėjimų lentelė */
+    .payment-table th,
+    .payment-table td {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.75rem;
+    }
+} 

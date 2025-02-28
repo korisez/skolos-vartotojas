@@ -1,0 +1,476 @@
+/* CSS for Help Page */
+
+/* Page Header */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.page-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Help Container Layout */
+.help-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.help-sidebar {
+    flex: 0 0 300px;
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border-right: 1px solid var(--border-color);
+}
+
+.help-content {
+    flex: 1;
+    padding: 2rem;
+    min-height: 600px;
+}
+
+/* Search Box */
+.help-sidebar .search-box {
+    display: flex;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.help-sidebar .search-box input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    padding-right: 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+}
+
+.help-sidebar .search-box button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: none;
+    border: none;
+    width: 3rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.help-sidebar .search-box button:hover {
+    color: var(--primary);
+}
+
+/* Help Navigation */
+.help-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.help-nav li {
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.help-nav li i {
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.help-nav li:hover {
+    background-color: rgba(var(--primary-rgb), 0.05);
+    color: var(--primary);
+}
+
+.help-nav li:hover i {
+    color: var(--primary);
+}
+
+.help-nav li.active {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+}
+
+.help-nav li.active i {
+    color: var(--primary);
+}
+
+/* Help Sections */
+.help-section {
+    display: none;
+}
+
+.help-section.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.help-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+/* Accordion */
+.accordion {
+    margin-bottom: 2rem;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 1.25rem;
+    background-color: var(--bg-light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+    background-color: rgba(var(--primary-rgb), 0.05);
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.accordion-toggle {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.accordion-toggle:hover {
+    color: var(--primary);
+}
+
+.accordion-item.active .accordion-toggle {
+    transform: rotate(180deg);
+    color: var(--primary);
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1.25rem;
+    max-height: 1000px;
+}
+
+.accordion-content p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.accordion-content ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.accordion-content ul li {
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+/* Contact Section */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+.contact-details {
+    flex-grow: 1;
+}
+
+.contact-details h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.contact-details p {
+    margin: 0 0 0.25rem 0;
+    color: var(--text-muted);
+}
+
+.contact-note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.contact-form-container h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.contact-form-container > p {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-weight: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 0.3rem;
+}
+
+.checkbox-label span {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.checkbox-label a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Live Chat Button */
+.live-chat-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+}
+
+.chat-toggle {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: all 0.2s ease;
+}
+
+.chat-toggle:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.chat-toggle i {
+    font-size: 1.25rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .help-container {
+        flex-direction: column;
+    }
+    
+    .help-sidebar {
+        flex: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 1.25rem;
+    }
+    
+    .help-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    .live-chat-button {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .chat-toggle span {
+        display: none;
+    }
+    
+    .chat-toggle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .chat-toggle i {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .help-content {
+        padding: 1rem;
+    }
+    
+    .accordion-header {
+        padding: 1rem;
+    }
+    
+    .accordion-item.active .accordion-content {
+        padding: 1rem;
+    }
+} 

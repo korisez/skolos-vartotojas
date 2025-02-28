@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagalba | Skolų valdymo portalas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="pagalba.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Debtorium</h1>
+            </div>
+            <div class="top-bar">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="lt" selected>LT</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </div>
+                <div class="user-menu">
+                    <span id="user-name">Jonas Petraitis</span>
+                    <div class="avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+                            <li><a href="#"><i class="fas fa-sign-out-alt"></i> Atsijungti</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="main-nav">
+                <li><a href="index.html"><i class="fas fa-home"></i> Pagrindinis</a></li>
+                <li><a href="skolos-valdymas.html"><i class="fas fa-money-bill-wave"></i> Skolos valdymas</a></li>
+                <li><a href="dokumentai.html"><i class="fas fa-file-alt"></i> Dokumentai</a></li>
+                <li class="active"><a href="pagalba.html"><i class="fas fa-question-circle"></i> Pagalba</a></li>
+                <li><a href="nustatymai.html"><i class="fas fa-cog"></i> Nustatymai</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Pagalba</h1>
+                <p>Raskite atsakymus į dažniausiai užduodamus klausimus ir gaukite pagalbą</p>
+            </div>
+            
+            <!-- Help Tabs -->
+            <div class="help-container">
+                <div class="help-sidebar">
+                    <div class="search-box">
+                        <input type="text" placeholder="Ieškoti pagalbos...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <ul class="help-nav">
+                        <li class="active" data-section="faq"><i class="fas fa-question-circle"></i> Dažniausiai užduodami klausimai</li>
+                        <li data-section="account"><i class="fas fa-user"></i> Paskyros valdymas</li>
+                        <li data-section="debt"><i class="fas fa-money-bill-wave"></i> Skolos valdymas</li>
+                        <li data-section="payments"><i class="fas fa-credit-card"></i> Mokėjimai</li>
+                        <li data-section="documents"><i class="fas fa-file-alt"></i> Dokumentai</li>
+                        <li data-section="contact"><i class="fas fa-envelope"></i> Susisiekti su mumis</li>
+                    </ul>
+                </div>
+                
+                <div class="help-content">
+                    <!-- FAQ Section -->
+                    <div id="faq" class="help-section active">
+                        <h2>Dažniausiai užduodami klausimai</h2>
+                        
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip galiu matyti savo skolas?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Savo skolas galite matyti valdymo skydelyje (pradžios puslapyje) arba išsamiau "Skolų valdymo" puslapyje. Skydelyje matysite bendrą skolos sumą, mokėjimo būklę ir artimiausius mokėjimus. Norėdami gauti išsamesnę informaciją, pereikite į Skolų valdymo puslapį, kur galėsite peržiūrėti skolos istoriją, mokėjimo grafiką ir mokėjimo galimybes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip galiu atlikti mokėjimą?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Mokėjimą galite atlikti "Skolų valdymo" puslapyje pasirinkę skirtuką "Mokėjimo parinktys". Ten galėsite pasirinkti mokėjimo sumą ir būdą. Palaikomi įvairūs mokėjimo būdai, įskaitant banko korteles, internetinę bankininkystę, elektronines pinigines ir grynųjų pinigų mokėjimus per partnerius. Sėkmingai atlikus mokėjimą, gausite patvirtinimą el. paštu ir mokėjimas bus iš karto atnaujintas jūsų sąskaitoje.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip galiu prašyti mokėjimo grafiko?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Jei jums reikia mokėjimo grafiko arba siekiate pratęsti mokėjimo terminą, galite pateikti prašymą "Skolų valdymo" puslapyje pasirinkę skirtuką "Mokėjimo grafikas" ir spustelėję mygtuką "Prašyti mokėjimo grafiko". Užpildykite formą, nurodydami, kokį grafiką pageidaujate, ir pateikite prašymą. Mūsų komanda peržiūrės jūsų prašymą ir susisieks su jumis per 1-2 darbo dienas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Ar galiu gauti mokėjimo kvitą?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Taip, mokėjimo kvitus galite rasti "Dokumentų" puslapyje. Po kiekvieno mokėjimo automatiškai sugeneruojamas mokėjimo kvitas, kurį galite atsisiųsti arba peržiūrėti internete. Dokumentų puslapyje taip pat galite filtruoti dokumentus pagal tipą, pasirinkdami "Mokėjimo kvitai", kad matytumėte tik mokėjimo kvitus.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip galiu pakeisti savo asmeninę informaciją?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Savo asmeninę informaciją galite atnaujinti "Nustatymų" puslapyje. Čia galite keisti kontaktinę informaciją, pavyzdžiui, el. pašto adresą, telefono numerį ir adresą. Atkreipkite dėmesį, kad kai kuriems duomenims (pvz., vardui, pavardei ar asmens kodui) pakeisti gali prireikti pateikti papildomus dokumentus. Tokiu atveju susisiekite su mūsų klientų aptarnavimo komanda.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Ką daryti, jei negaliu atlikti mokėjimo laiku?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Jei numatote, kad negalėsite atlikti mokėjimo laiku, svarbu kuo greičiau susisiekti su mumis. Puslapyje "Susisiekti su mumis" užpildykite formą arba paskambinkite mūsų klientų aptarnavimo telefonu. Drauge galime išnagrinėti galimybes, pvz., mokėjimo atidėjimą ar mokėjimo grafiko koregavimą. Anksti informuodami apie galimus mokėjimo sunkumus, galite išvengti vėluojančio mokėjimo mokesčių ir neigiamo poveikio kredito istorijai.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Account Management Section -->
+                    <div id="account" class="help-section">
+                        <h2>Paskyros valdymas</h2>
+                        
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip pakeisti savo slaptažodį?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Slaptažodį galite pakeisti nustatymų puslapyje, skyriuje "Saugumas". Spustelėkite mygtuką "Keisti slaptažodį", įveskite dabartinį slaptažodį, tada naują slaptažodį ir jo patvirtinimą. Slaptažodis turi būti bent 8 simbolių, turėti didžiųjų ir mažųjų raidžių, skaičių ir specialių simbolių.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip atnaujinti kontaktinę informaciją?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Kontaktinę informaciją galite atnaujinti nustatymų puslapyje, skyriuje "Asmeninė informacija". Čia galite redaguoti savo el. pašto adresą, telefono numerį ir adresą. Po pakeitimų būtinai spustelėkite mygtuką "Išsaugoti pakeitimus".</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip įjungti dviejų faktorių autentifikavimą?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Dviejų faktorių autentifikavimą (2FA) galite įjungti nustatymų puslapyje, skyriuje "Saugumas". Spustelėkite "Įjungti dviejų faktorių autentifikavimą" ir vykdykite instrukcijas. Galite pasirinkti SMS žinutės arba autentifikavimo programėlės (pavyzdžiui, Google Authenticator arba Authy) naudojimą.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip galiu keisti pranešimų nustatymus?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Pranešimų nustatymus galite keisti nustatymų puslapyje, skyriuje "Pranešimai". Čia galite pasirinkti, kokius pranešimus norite gauti, ir nurodyti pageidaujamą jų gavimo būdą (el. paštu, SMS žinute arba programėlėje). Galite nustatyti priminimus apie artėjančius mokėjimus, pranešimus apie atliktus mokėjimus, būsenos atnaujinimus ir kitus svarbius pranešimus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Debt Management Section -->
+                    <div id="debt" class="help-section">
+                        <h2>Skolos valdymas</h2>
+                        
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip peržiūrėti savo skolos detales?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Išsamią informaciją apie skolą galite peržiūrėti skolų valdymo puslapyje. Čia matysite pradinę skolos sumą, dabartinį likutį, palūkanų normą (jei taikoma), mokėjimo grafiką ir ankstesnių mokėjimų istoriją. Taip pat galite peržiūrėti informaciją apie delspinigius ar kitus taikomus mokesčius.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip suprasti mokėjimo grafiką?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Mokėjimo grafikas rodo visus planuojamus mokėjimus iki visiško skolos grąžinimo. Kiekvienam mokėjimui nurodoma data, suma ir būsena (apmokėta, laukiama mokėjimo arba vėluojama). Paspaudę ant konkretaus mokėjimo galite pamatyti išsamesnę informaciją, įskaitant sumokėtą pagrindinę sumą, palūkanas ir kitus mokesčius.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip prašyti naujo mokėjimo plano?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Naujo mokėjimo plano galite prašyti skolų valdymo puslapyje, mokėjimo grafiko skiltyje. Spustelėkite mygtuką "Prašyti naujo plano" ir pateikite informaciją apie savo finansinę situaciją bei pageidaujamą mokėjimo grafiką. Mūsų komanda peržiūrės jūsų prašymą ir susisieks su jumis dėl galimybių.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Ar galiu sumokėti skolą anksčiau?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Taip, galite sumokėti visą skolą arba jos dalį anksčiau, nei numatyta mokėjimo grafike. Skolų valdymo puslapyje, mokėjimo parinkčių skiltyje, pasirinkite "Išankstinis mokėjimas" ir įveskite norimą sumokėti sumą. Atkreipkite dėmesį, kad kai kurioms skoloms gali būti taikomas išankstinio mokėjimo mokestis – ši informacija bus pateikta prieš patvirtinant mokėjimą.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kas nutinka, jei praleidžiu mokėjimą?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Praleidus mokėjimą, pirmiausia gausite priminimą el. paštu ir/arba SMS žinute. Jei mokėjimas vėluoja daugiau nei 5 dienas, gali būti pradėti skaičiuoti delspinigiai, kurių dydis nurodytas jūsų sutartyje. Ilgiau nei 30 dienų vėluojantys mokėjimai gali būti perduoti skolų išieškojimo įmonei ir turėti neigiamos įtakos jūsų kredito istorijai. Jei numatote, kad negalėsite atlikti mokėjimo laiku, rekomenduojame kuo greičiau susisiekti su mumis, kad aptartume galimus sprendimus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payments Section -->
+                    <div id="payments" class="help-section">
+                        <h2>Mokėjimai</h2>
+                        
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kokie mokėjimo būdai prieinami?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Palaikome įvairius mokėjimo būdus:
+                                    <ul>
+                                        <li>Banko kortelės (Visa, Mastercard)</li>
+                                        <li>Internetinė bankininkystė (per "Banklink")</li>
+                                        <li>Elektroninės piniginės (PayPal, Paysera)</li>
+                                        <li>Tiesioginis debetas (reguliariems mokėjimams)</li>
+                                        <li>Grynųjų pinigų mokėjimai per partnerius (Maxima, Lietuvos paštas)</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kada mokėjimas atsispindės mano sąskaitoje?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Mokant banko kortele arba per internetinę bankininkystę, mokėjimas jūsų sąskaitoje atsispindės iš karto. Elektroninių piniginių mokėjimai paprastai apdorojami per 1-2 valandas. Grynųjų pinigų mokėjimai per partnerius gali užtrukti iki 2 darbo dienų. Po mokėjimo gavimo, jums bus išsiųstas patvirtinimo pranešimas, o jūsų mokėjimo istorija bus atnaujinta.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip nustatyti automatinius mokėjimus?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Automatinius mokėjimus galite nustatyti skolų valdymo puslapyje, mokėjimo parinkčių skiltyje. Pasirinkite "Nustatyti automatinius mokėjimus", pasirinkite mokėjimo būdą (banko kortelę arba tiesioginį debetą), mokėjimo dažnumą ir sumą. Patvirtinkite savo pasirinkimą ir automatiniai mokėjimai bus aktyvuoti. Galėsite bet kada pakeisti arba atšaukti šiuos nustatymus nustatymų puslapyje.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Ką daryti, jei mokėjimas nepavyko?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Jei mokėjimas nepavyko, gausite pranešimą su klaidos priežastimi. Dažniausios priežastys yra nepakankamos lėšos, neteisingi kortelės duomenys arba banko apribojimai. Patikrinkite savo banko sąskaitą arba kortelę ir bandykite mokėti dar kartą. Jei problema išlieka, susisiekite su mumis arba savo banku dėl pagalbos. Nepavykę automatiniai mokėjimai bus bandomi dar kartą po 24 valandų.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Ar galiu atšaukti mokėjimą?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Mokėjimą galima atšaukti tik tuo atveju, jei jis dar nebuvo apdorotas. Jei mokėjimas vis dar turi būseną "Laukiama", galite susisiekti su mūsų klientų aptarnavimo skyriumi ir prašyti jį atšaukti. Jau apdorotų mokėjimų atšaukti negalima, bet išskirtiniais atvejais galima prašyti grąžinimo. Kiekvienas toks prašymas vertinamas individualiai.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Documents Section -->
+                    <div id="documents" class="help-section">
+                        <h2>Dokumentai</h2>
+                        
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kokius dokumentus galiu rasti sistemoje?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Dokumentų puslapyje galite rasti:
+                                    <ul>
+                                        <li>Skolos grąžinimo sutartis</li>
+                                        <li>Mokėjimo grafikus</li>
+                                        <li>Mokėjimo sąskaitas</li>
+                                        <li>Mokėjimo kvitus</li>
+                                        <li>Pranešimus apie skolos būseną</li>
+                                        <li>Kitus su jūsų skola susijusius dokumentus</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip atsisiųsti dokumentą?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Dokumentą galite atsisiųsti dokumentų puslapyje, radę norimą dokumentą ir paspaudę mygtuką "Atsisiųsti" šalia jo. Galite atsisiųsti dokumentus PDF, DOCX arba JPG formatu, priklausomai nuo dokumento tipo. Atkreipkite dėmesį, kad kai kuriems dokumentams atsisiųsti gali prireikti papildomo patvirtinimo dėl saugumo.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kaip įkelti dokumentą?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Dokumentą galite įkelti dokumentų puslapyje, pasirinkę skirtuką "Įkelti dokumentą". Užpildykite reikiamą informaciją apie dokumentą (pavadinimą, tipą, datą), pasirinkite failą iš savo įrenginio ir spauskite "Įkelti". Palaikomi failų formatai yra PDF, JPG, PNG, DOC ir DOCX. Maksimalus failo dydis yra 10 MB. Įkelti dokumentai bus patikrinti mūsų komandos ir pridėti prie jūsų bylos.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3>Kiek laiko saugomi dokumentai?</h3>
+                                    <button class="accordion-toggle"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>Visi dokumentai saugomi sistemoje mažiausiai 7 metus nuo jų sukūrimo datos arba skolos grąžinimo, priklausomai nuo to, kuris laikotarpis ilgesnis. Tai atitinka įstatymuose nustatytus reikalavimus dokumentų saugojimui. Rekomenduojame svarbius dokumentus atsisiųsti ir išsaugoti asmeniniame archyve, net jei jie lieka prieinami sistemoje.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Section -->
+                    <div id="contact" class="help-section">
+                        <h2>Susisiekti su mumis</h2>
+                        
+                        <div class="contact-info">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Telefonu</h3>
+                                    <p>+370 5 123 4567</p>
+                                    <p class="contact-note">Darbo dienomis 8:00 - 20:00, šeštadieniais 9:00 - 16:00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>El. paštu</h3>
+                                    <p>pagalba@debtorium.lt</p>
+                                    <p class="contact-note">Atsakome per 1 darbo dieną</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Pokalbių langas</h3>
+                                    <p>Paspauskite pokalbių piktogramą ekrano dešiniajame apatiniame kampe</p>
+                                    <p class="contact-note">Darbo dienomis 8:00 - 20:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-container">
+                            <h3>Siųsti užklausą</h3>
+                            <p>Užpildykite formą ir mes susisieksime su jumis per 1 darbo dieną.</p>
+                            
+                            <form class="contact-form">
+                                <div class="form-group">
+                                    <label for="contact-name">Vardas, pavardė</label>
+                                    <input type="text" id="contact-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-email">El. paštas</label>
+                                    <input type="email" id="contact-email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-subject">Tema</label>
+                                    <select id="contact-subject" required>
+                                        <option value="">Pasirinkite temą</option>
+                                        <option value="account">Paskyros klausimai</option>
+                                        <option value="payment">Mokėjimo klausimai</option>
+                                        <option value="schedule">Mokėjimo grafiko klausimai</option>
+                                        <option value="document">Dokumentų klausimai</option>
+                                        <option value="technical">Techniniai klausimai</option>
+                                        <option value="other">Kita</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contact-message">Žinutė</label>
+                                    <textarea id="contact-message" rows="5" required></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" required>
+                                        <span>Sutinku su <a href="#">privatumo politika</a> ir asmens duomenų tvarkymu</span>
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Siųsti užklausą</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Live Chat Button -->
+            <div class="live-chat-button">
+                <button class="chat-toggle">
+                    <i class="fas fa-comments"></i>
+                    <span>Reikia pagalbos?</span>
+                </button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    &copy; 2024 Debtorium. Visos teisės saugomos.
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privatumo politika</a>
+                    <a href="#">Teisinė informacija</a>
+                    <a href="#">Slapukų politika</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="shared.js"></script>
+    <script src="pagalba.js"></script>
+</body>
+</html> 

@@ -1,0 +1,518 @@
+/* Specific styles for the debt management page */
+
+/* Page header with summary */
+.page-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.page-header h1 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.summary-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-small);
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 150px;
+}
+
+.summary-item .label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-xs);
+}
+
+.summary-item .value {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.summary-item .amount {
+    color: var(--danger);
+}
+
+/* Tabs */
+.tabs {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-small);
+    overflow: hidden;
+}
+
+.tab-nav {
+    display: flex;
+    border-bottom: 1px solid var(--border-light);
+    background-color: var(--bg-light);
+}
+
+.tab-nav li {
+    padding: var(--spacing-md) var(--spacing-lg);
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all var(--transition-fast);
+    border-bottom: 3px solid transparent;
+}
+
+.tab-nav li i {
+    margin-right: var(--spacing-sm);
+}
+
+.tab-nav li.active {
+    color: var(--primary);
+    background-color: var(--bg-white);
+    border-bottom-color: var(--primary);
+}
+
+.tab-nav li:hover:not(.active) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.tab-content {
+    padding: var(--spacing-lg);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Filter bar */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+    gap: var(--spacing-sm);
+}
+
+.search-box {
+    display: flex;
+    flex: 1;
+    max-width: 300px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-light);
+    border-right: none;
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.search-box button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--primary);
+    color: var(--text-white);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.filter-options {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.filter-options select {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-white);
+}
+
+/* Tables */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: var(--spacing-md);
+}
+
+.data-table, .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td,
+.schedule-table th,
+.schedule-table td {
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.data-table th,
+.schedule-table th {
+    font-weight: 600;
+    color: var(--text-light);
+    background-color: var(--bg-light);
+}
+
+.data-table tr:last-child td,
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tr:hover td,
+.schedule-table tr:hover td {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.data-table .amount,
+.schedule-table .amount {
+    font-weight: 500;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+}
+
+.btn-page {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-light);
+    margin: 0 var(--spacing-xs);
+    background-color: var(--bg-white);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-page.active {
+    background-color: var(--primary);
+    color: var(--text-white);
+    border-color: var(--primary);
+}
+
+.btn-page:hover:not(.active):not([disabled]) {
+    background-color: var(--bg-light);
+}
+
+.btn-page[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Payment Schedule Card */
+.payment-schedule-card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-small);
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg);
+}
+
+.payment-schedule-card .card-header {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-schedule-card .card-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-action {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-light);
+    color: var(--primary);
+    transition: all var(--transition-fast);
+}
+
+.btn-action:hover {
+    background-color: var(--primary-light);
+    color: var(--text-white);
+}
+
+.schedule-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.schedule-info .info-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-info .label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-xs);
+}
+
+.schedule-info .value {
+    font-weight: 500;
+}
+
+.view-all {
+    display: inline-flex;
+    align-items: center;
+    margin-top: var(--spacing-md);
+}
+
+.view-all i {
+    margin-left: var(--spacing-xs);
+    transition: transform var(--transition-fast);
+}
+
+.view-all:hover i {
+    transform: translateX(3px);
+}
+
+/* Payment Options */
+.payment-options-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.payment-options-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.payment-options-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.payment-amount,
+.payment-methods,
+.payment-history {
+    margin-bottom: var(--spacing-xl);
+}
+
+.payment-amount h4,
+.payment-methods h4,
+.payment-history h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.amount-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.amount-option {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-white);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.amount-option:hover,
+.amount-option.active {
+    background-color: var(--primary);
+    color: var(--text-white);
+    border-color: var(--primary);
+}
+
+.custom-amount {
+    display: none;
+    margin-top: var(--spacing-md);
+}
+
+.custom-amount.active {
+    display: block;
+}
+
+.custom-amount label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.custom-amount input {
+    width: 100%;
+    max-width: 200px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+}
+
+.methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.payment-method-card {
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.payment-method-card:hover {
+    box-shadow: var(--shadow-medium);
+    border-color: var(--primary-light);
+}
+
+.method-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.payment-method-card h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.payment-method-card p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.payment-history {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--bg-light);
+    border-radius: var(--radius-md);
+}
+
+.payment-history p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Additional button styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-sm {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.875rem;
+}
+
+.btn-outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: var(--text-white);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--text-white);
+}
+
+.btn-secondary:hover {
+    background-color: #27ae60;
+}
+
+.pay-now {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tab-nav {
+        flex-direction: column;
+    }
+    
+    .tab-nav li.active {
+        border-bottom: none;
+        border-left: 3px solid var(--primary);
+    }
+    
+    .summary-item {
+        flex: 0 0 100%;
+    }
+    
+    .filter-bar {
+        flex-direction: column;
+    }
+    
+    .search-box {
+        max-width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .filter-options {
+        width: 100%;
+    }
+    
+    .filter-options select {
+        flex: 1;
+    }
+    
+    .schedule-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .methods-grid {
+        grid-template-columns: 1fr;
+    }
+} 
